@@ -1,0 +1,22 @@
+<div class="top-bar">
+  <div class="mode-switcher">
+    <button [class.active-pick]="currentMode === 'pick'" (click)="toggleMode('pick')">Picks</button>
+    <button [class.active-ban]="currentMode === 'ban'" (click)="toggleMode('ban')">Bans</button>
+  </div>
+
+  <button class="reset-btn" (click)="resetBlocks()">Reset Maps</button>
+</div>
+
+<div class="main-container">
+  <div class="tournament-grid">
+    <app-tournament-block 
+      *ngFor="let block of tournamentBlocks" 
+      [title]="block.title"
+      [imageUrl]="block.img"
+      [status]="block.status"
+      (click)="handleBlockClick(block)">
+    </app-tournament-block>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

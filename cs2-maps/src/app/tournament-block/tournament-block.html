@@ -1,0 +1,9 @@
+<div class="block-container" [ngClass]="status">
+    <h3>{{ title }}</h3>
+    <div class="image-wrapper">
+        <img [src]="imageUrl" alt="{{ title }}">
+        <div class="status-overlay" *ngIf="status !== 'active'">
+            {{ status | uppercase }}
+        </div>
+    </div>
+</div>

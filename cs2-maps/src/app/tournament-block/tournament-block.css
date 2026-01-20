@@ -1,0 +1,57 @@
+h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.block-container {
+    background-color: #1b1e22;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Pick Mode: Green tint */
+.pick {
+    filter: sepia(50%) hue-rotate(100deg) saturate(3) brightness(0.8);
+    box-shadow: 0 0 15px rgba(85, 172, 88, 0.4);
+}
+
+/* Ban Mode: Red tint (Replacing your previous grayscale) */
+.ban {
+    filter: grayscale(100%) brightness(0.3);
+    /* Much darker when banned */
+    opacity: 0.5;
+}
+
+.status-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 160px;
+    /* Fixed height for all map images */
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #222;
+    /* Placeholder color while loading */
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This crops the image to fill the box without stretching */
+    display: block;
+}

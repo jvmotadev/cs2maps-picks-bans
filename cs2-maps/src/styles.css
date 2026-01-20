@@ -1,0 +1,19 @@
+/* This targets the entire browser window */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0e1012;
+    /* Deepest background */
+    color: #ffffff;
+    overflow-x: hidden;
+    /* Prevents accidental horizontal scrolling */
+}
+
+/* Ensure the Angular root tag also fills the screen */
+app-root {
+    display: block;
+    min-height: 100vh;
+    background-color: #0e1012;
+}

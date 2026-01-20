@@ -1,0 +1,95 @@
+/* Apply to the whole page */
+:host {
+    display: block;
+    min-height: 100vh;
+    background-color: #121417;
+    /* Very dark grey/black */
+    color: #eeeeee;
+    /* Off-white text for better readability */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+}
+/* The Grid area for the 7 maps */
+.tournament-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows maps to drop to the next row */
+    justify-content: center;
+    /* Centers the 3 maps on the bottom row */
+    gap: 15px;
+    max-width: 1100px;
+    /* Limits width so it stays 4 on top, 3 on bottom */
+    margin: 0 auto;
+}
+
+/* Force the size of each block so they are identical */
+app-tournament-block {
+    flex: 0 1 calc(23% - 15px);
+    /* This calculation keeps 4 per row */
+    min-width: 220px;
+    /* Prevents them from getting too skinny */
+}
+
+.header-actions {
+    display: flex;
+    justify-content: flex-end;
+    /* Pushes content to the right */
+    padding: 20px;
+}
+
+.reset-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.reset-btn:hover {
+    background-color: #cc0000;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    /* This creates the gap between left and right */
+    align-items: center;
+    /* Centers buttons vertically */
+    width: 90%;
+    /* Matches the width of your map grid */
+    max-width: 1200px;
+    margin: 20px auto;
+    /* Centers the bar on the screen and adds spacing */
+    padding: 15px 25px;
+    background-color: #1b1e22; /* Slightly lighter than the body to create depth */
+    border: 1px solid #32383e;
+    /* Matches your current grey bar */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mode-switcher button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #444;
+    background: #222;
+    color: #fff;
+}
+
+.active-pick {
+    background-color: #33a337 !important;
+}
+
+.active-ban {
+    background-color: #f44336 !important;
+}
