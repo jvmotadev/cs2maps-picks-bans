@@ -4,6 +4,7 @@
   "cli": {
     "packageManager": "npm"
   },
+
   "newProjectRoot": "projects",
   "projects": {
     "cs2-maps": {
@@ -16,6 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/cs2-maps",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
